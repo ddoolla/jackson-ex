@@ -1,4 +1,4 @@
-package com.example.jacksonex.practice;
+package com.example.jacksonex;
 
 import lombok.*;
 

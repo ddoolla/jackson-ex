@@ -1,5 +1,6 @@
-package com.example.jacksonex.practice;
+package com.example.jacksonex.objectmapper;
 
+import com.example.jacksonex.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -8,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 import java.util.Map;
 
-public class ObjectMapperBasicEx {
+public class BasicEx {
 
     public static void main(String[] args) throws JsonProcessingException {
 
@@ -28,6 +29,9 @@ public class ObjectMapperBasicEx {
                     "hobby": "shorts"
                 }
                 """;
+
+        Person personObject = objectMapper.readValue(json, Person.class);
+        System.out.println("personObject = " + personObject);
 
         JsonNode jsonNode = objectMapper.readTree(json);
         String name = jsonNode.get("name").asText();
