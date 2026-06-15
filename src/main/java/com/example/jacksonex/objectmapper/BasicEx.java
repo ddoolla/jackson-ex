@@ -37,7 +37,7 @@ public class BasicEx {
         String name = jsonNode.get("name").asText();
         System.out.println("name = " + name);
 
-        // list from JSON array string
+        // list from JSON array
         String jsonPersonArray = """
                 [
                     {"name": "A", "age": 1, "hobby": "TV"},
@@ -49,7 +49,7 @@ public class BasicEx {
         List<Person> people = objectMapper.readValue(jsonPersonArray, new TypeReference<List<Person>>() {});
         System.out.println("people = " + people);
 
-        // map from JSON string
+        // map from JSON
         Map<String, Object> map = objectMapper.readValue(json, new TypeReference<Map<String, Object>>() {});
         System.out.println("map = " + map);
     }
