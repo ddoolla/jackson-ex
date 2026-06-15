@@ -1,4 +1,4 @@
-package com.example.jacksonex;
+package com.example.jacksonex.objectmapper;
 
 import lombok.*;
 

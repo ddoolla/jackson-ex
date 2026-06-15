@@ -1,6 +1,5 @@
 package com.example.jacksonex.objectmapper;
 
-import com.example.jacksonex.Person;
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

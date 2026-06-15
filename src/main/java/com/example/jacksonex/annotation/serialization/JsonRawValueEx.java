@@ -1,6 +1,6 @@
 package com.example.jacksonex.annotation.serialization;
 
-import com.example.jacksonex.Person;
+import com.example.jacksonex.objectmapper.Person;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
