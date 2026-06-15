@@ -1,6 +1,5 @@
 package com.example.jacksonex.annotation.serialization;
 
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
@@ -9,6 +8,22 @@ import lombok.Getter;
 /**
  * 직렬화에 사용될 단일 값 지정할 때 사용
  * 주로 열거형에서 많이 사용됨
+ *
+ * 사용 전
+ * {
+ *  "name": "Lee",
+ *  "age": 33,
+ *  "hobby": "movie",
+ *  "gender": "MALE"
+ * }
+ *
+ * 사용 후
+ * {
+ *  "name": "Lee"
+ *  ,"age": 33,
+ *  "hobby": "movie",
+ *  "gender": "남자"
+ * }
  */
 public class JsonValueEx {
 
@@ -27,7 +42,7 @@ public class JsonValueEx {
         MALE("남자"),
         FEMALE("여자");
 
-        @JsonValue
+//        @JsonValue
         private final String description; // MALE, FEMALE 이 아닌, "남자", "여자" 값으로 직렬화
 
         Gender(String description) {

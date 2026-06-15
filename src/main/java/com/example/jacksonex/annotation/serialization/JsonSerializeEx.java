@@ -24,7 +24,7 @@ public class JsonSerializeEx {
 
         private String name;
 
-        @JsonSerialize(using = BirthDaySerializer.class) // yyyy-MM-dd -> yyyy/MM/dd
+        @JsonSerialize(using = BirthDaySerializer.class)
         private LocalDate birthday;
     }
 

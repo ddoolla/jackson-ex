@@ -8,6 +8,9 @@ import lombok.Getter;
 
 /**
  * 직렬화 시, 특정 게터 메서드를 JSON 속성에 추가함
+ *
+ * 사용하지 않아도 게터 메서드 형식에 맞으면 JSON 프로퍼티로 인식함
+ * 이름을 바꾸기 위해서 사용한다면 차라리 @JsonProperty를 사용하면 될 듯?
  */
 public class JsonGetterEx {
 
@@ -18,7 +21,7 @@ public class JsonGetterEx {
         private String firstName;
         private String lastName;
 
-        @JsonGetter
+        @JsonGetter("full_name")
         public String getFullName() {
             return this.firstName + " " + this.lastName;
         }

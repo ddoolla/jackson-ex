@@ -1,6 +1,5 @@
 package com.example.jacksonex.annotation.serialization;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
@@ -11,6 +10,22 @@ import java.util.Map;
 
 /**
  * 직렬화 시, Map 필드의 요소를 JSON 속성으로 나열함
+ *
+ * 사용 전
+ * {
+ *  "name": "Lee",
+ *  "properties": {
+ *      "age": "33",
+ *      "hobby": "movie"
+ *  }
+ * }
+ *
+ * 사용 후
+ * {
+ *  "name": "Lee"
+ *  ,"age": "33",
+ *  "hobby": "movie"
+ * }
  */
 public class JsonAnyGetterEx {
 
@@ -20,7 +35,7 @@ public class JsonAnyGetterEx {
 
         private String name;
 
-        @JsonAnyGetter
+//        @JsonAnyGetter
         private Map<String, String> properties;
     }
 
