@@ -1,5 +1,6 @@
 package com.example.jacksonex.annotation.serialization;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
@@ -35,7 +36,7 @@ public class JsonAnyGetterEx {
 
         private String name;
 
-//        @JsonAnyGetter
+        @JsonAnyGetter
         private Map<String, String> properties;
     }
 

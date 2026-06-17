@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * JSON 속성 이름을 정의한다.
+ * 직렬화, 역직렬화 시, JSON 속성 이름을 정의한다.
  *
  * 사용 전
  * {
@@ -41,10 +41,13 @@ public class JsonPropertyEx {
 
     public static void main(String[] args) throws JsonProcessingException {
 
+        // 직렬화
         Person person = new Person("Lee", 33, "movie");
 
         String personAsString = new ObjectMapper().writeValueAsString(person);
 
         System.out.println("personAsString = " + personAsString);
+
+        // todo 역직렬화
     }
 }
